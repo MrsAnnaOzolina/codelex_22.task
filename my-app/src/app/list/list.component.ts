@@ -13,16 +13,7 @@ export class ListComponent {
   
    myList:OneItem[] =  []
 
-
   constructor (private myListService: MyListService  ) {}
-
-  changeStatus(){
-    if (this.checked){
-     return  this.checked = false
-    } else {
-      return this.checked = true
-    }
-  }
 
 ngOnInit(){
   this.myListService.getData(this.checked).subscribe((response)=>{
