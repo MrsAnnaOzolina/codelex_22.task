@@ -1,0 +1,29 @@
+{
+  "myList": [
+    {
+      "id": 1,
+      "name": "buy milk",
+      "type": "shop"
+    },
+    {
+      "id": 2,
+      "name": "buy carrots",
+      "type": "shop"
+    },
+    {
+      "name": "clean house ",
+      "type": "home",
+      "id": 4
+    },
+    {
+      "name": "clean bathroom",
+      "type": "home",
+      "id": 5
+    },
+    {
+      "name": "anna clean",
+      "type": "home",
+      "id": 6
+    }
+  ]
+}
