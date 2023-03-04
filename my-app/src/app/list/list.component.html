@@ -1,40 +1,10 @@
-<div class="toogle">
-  <label >Show only homeworks</label>
-  <label class="switch">
-    <input type="checkbox"
-      [checked]="checked"
-      (change)="checked= !checked"
-      (click)="getData()"
-    >
-    <span class="slider round"></span>
-  </label>
-</div>
-
-<div>
-  <h1 class="text" >Add new to do: </h1>
-  <div>
-      <!-- <p *ngIf="nameAdded.touched && nameAdded.invalid && inputData.submitted" class="formText"> Name should be at least 5 symbols long and npt longer then 20 symbols</p>
-      <p *ngIf="typeAdded.touched === false && inputData.submitted" class="formText"> Please choose type</p> -->
-  <form #inputData= "ngForm" (ngSubmit)="submit(inputData)"  >
-      <label for="name"></label>
-      <input #nameAdded="ngModel" required minlength="5" maxlength="20"  type="text" name="name" class="form-control inputForm__name" placeholder="to do..." ngModel>
-      <label for="name"></label>
-      <select #typeAdded="ngModel" required class="inputForm__type" name="type" id="" ngModel>
-          <option value="home">home</option>
-          <option value="shop">shop</option>
-          <option value="work">work</option>
-      </select>
-      <button class="form_button" type="submit"> Add </button>
-  </form>
-</div>
-</div>
-
-
 <div *ngFor="let oneItem of myList; index as index" class="oneItem" >
     <p class="oneItem__text2">{{oneItem.type}} </p>
-    <span class="oneItem__text">{{oneItem.name}}</span >
+    <span class="oneItem__text2">{{oneItem.name}}</span >
       <span class="oneItem__text">
-        <button class="oneItem__delete" (click)="deleteTask(oneItem.id)" >x</button>
+        <button 
+        class="oneItem__delete" 
+        (click)="deleteItem(oneItem.id)"
+         >x</button>
       </span>
     </div>
-

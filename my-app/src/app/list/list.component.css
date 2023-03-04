@@ -36,8 +36,8 @@ p {
 .oneItem{
   display: grid;
   grid-template-columns: repeat(3, 250px);
-  border:none;
-  background-color: rgb(169, 130, 130);
+  border: 2px solid rgb(169, 130, 130);;
+  background-color: rgb(169, 130, 130);;
   margin-top: 20px;
   border-radius: 10px;
   align-items: center;
@@ -53,7 +53,7 @@ p {
   font-size: 30px;
   display:flex;
   justify-content: flex-start;
-  margin-left: 10px;
+  margin-left: 30px;
   
 }
 .oneItem__delete{
@@ -64,113 +64,3 @@ p {
   margin:15px;
   font-family: 'Lobster', cursive;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-    
- 
-
-.text{
- color: darkblue;
-}
-.inputForm__name{
-    min-width: 30vw;
-    margin-right: 20px;
-   height: 50px;
-   border-radius: 10px;
-   border: 2px solid darkblue;
-   font-size: 20px;
-   font-family: 'Lobster', cursive;
-}
-.inputForm__type{
-    height: 55px;
-    width: 100px;
-    border-radius: 10px;
-    border: 2px solid darkblue;
-    font-size: 20px;
-    padding: 10px;
-    font-family: 'Lobster', cursive;
-}
-.form_button{
-   border: none;
-   background-color: rgb(225, 111, 111);
-   height: 55px;
-   margin-left: 30px;
-   border-radius: 10px;
-   width: 80px;
-   font-size: 20px;
-   font-family: 'Lobster', cursive;
-}
-.form_button:hover{
-opacity: 0.9;
-}
-.formText{
-    color: red;
-}
-
-
-.toogle{
-    display: flex;
-    justify-content: flex-end;
-    font-size: 20px;
-}
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-left: 10px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(207, 186, 186);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: rgb(185, 123, 123);
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px rgb(185, 123, 123);
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
