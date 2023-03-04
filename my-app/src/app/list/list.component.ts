@@ -23,19 +23,21 @@ ngOnInit(){
   })
 }
 submit(inputData:any){
-  console.log(inputData.form.controls.type.value)
-  if (inputData.form.controls.name.value.length < 5 || inputData.form.controls.name.value.length > 20 ){
-  
-  } if (inputData.form.controls.type.value === "") {
 
+  if (inputData.form.controls.name.value.length < 5 || inputData.form.controls.name.value.length > 20 ){
+   alert("Name should be at least 5 symbols long and npt longer then 20 symbols")
+  } else if (inputData.form.controls.type.value === "") {
+    alert("Choose type")
   }
-  else {
+  else if (inputData.form.controls.name.value.length > 5 && inputData.form.controls.name.value.length < 20 &&inputData.form.controls.type.value !== "") {
   this.myListService.addData(inputData.form.controls.name.value, inputData.form.controls.type.value)
   .subscribe((response)=>{
    response })
    this.ngOnInit()
+   inputData.reset(); 
   }
-  
+
+ 
 }
 
 deleteTask(itemId:any){
