@@ -15,7 +15,7 @@
   <div>
       <p *ngIf="nameAdded.touched && nameAdded.invalid && inputData.submitted" class="formText"> Name should be at least 5 symbols long and npt longer then 20 symbols</p>
       <p *ngIf="typeAdded.touched === false && inputData.submitted" class="formText"> Please choose type</p>
-  <form #inputData= "ngForm" (ngSubmit)="submit(inputData)" >
+  <form #inputData= "ngForm" (ngSubmit)="submit(inputData)" novalidate >
       <label for="name"></label>
       <input #nameAdded="ngModel" required minlength="5" maxlength="20"  type="text" name="name" class="form-control inputForm__name" placeholder="to do..." ngModel>
       <label for="name"></label>

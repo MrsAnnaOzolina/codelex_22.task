@@ -21,9 +21,14 @@
       "id": 5
     },
     {
-      "name": "anna clean",
-      "type": "home",
-      "id": 6
+      "name": "read handbook",
+      "type": "work",
+      "id": 7
+    },
+    {
+      "name": "finish script",
+      "type": "work",
+      "id": 8
     }
   ]
 }

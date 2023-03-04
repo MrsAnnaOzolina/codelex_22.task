@@ -13,6 +13,8 @@ export class ListComponent {
   
    myList:OneItem[] =  []
 
+
+
   constructor (private myListService: MyListService  ) {}
 
 ngOnInit(){
@@ -21,11 +23,18 @@ ngOnInit(){
   })
 }
 submit(inputData:any){
-   
+  console.log(inputData.form.controls.type.value)
+  if (inputData.form.controls.name.value.length < 5 || inputData.form.controls.name.value.length > 20 ){
+  
+  } if (inputData.form.controls.type.value === "") {
+
+  }
+  else {
   this.myListService.addData(inputData.form.controls.name.value, inputData.form.controls.type.value)
   .subscribe((response)=>{
    response })
    this.ngOnInit()
+  }
   
 }
 
