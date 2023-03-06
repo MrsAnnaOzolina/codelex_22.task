@@ -25,7 +25,7 @@ export class AppComponent {
       })
   }
 
-  submit(inputData: any) {
+  addItem(inputData: any) {
     if (inputData.form.controls.name.value.length < 5 || inputData.form.controls.name.value.length > 20) {
     } else if (inputData.form.controls.type.value === "") {
     } else if (inputData.form.controls.name.value.length > 5 && inputData.form.controls.name.value.length < 20 && inputData.form.controls.type.value !== "") {

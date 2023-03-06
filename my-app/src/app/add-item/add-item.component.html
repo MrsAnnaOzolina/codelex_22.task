@@ -5,7 +5,7 @@
         <p *ngIf="!typeAdded.touched && inputData.submitted" class="formText"> Please choose type</p>
     <form 
     #inputData= "ngForm" 
-    (ngSubmit)="submit(inputData)" 
+    (ngSubmit)="addItem(inputData);inputData.reset()" 
     >
         <label for="name"></label>
         <input #nameAdded="ngModel" required minlength="5" maxlength="20"  type="text" name="name" class="form-control inputForm__name" placeholder="to do..." ngModel>
@@ -15,7 +15,11 @@
             <option value="shop">shop</option>
             <option value="work">work</option>
         </select>
-        <button class="form_button" type="submit"> Add </button>
+        <button 
+        class="form_button" 
+        type="submit"
+        [disabled]="!inputData.form.valid"
+        > Add </button>
     </form>
 </div>
 </div>

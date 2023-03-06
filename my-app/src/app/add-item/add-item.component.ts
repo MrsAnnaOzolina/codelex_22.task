@@ -8,7 +8,7 @@ import { Component, Output,EventEmitter } from '@angular/core';
 export class AddItemComponent {
   @Output() addData = new EventEmitter<any>();
 
-  submit(data:any) {
+  addItem(data:any) {
     this.addData.emit(data);
   }
 }

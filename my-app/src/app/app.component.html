@@ -1,6 +1,6 @@
 <div class="content">
   <app-switch-button (filterData)="filterData($event)"></app-switch-button>
   <h1 class="content__title">My to do list</h1>
-  <app-add-item (addData)="submit($event)"></app-add-item>
+  <app-add-item (addData)="addItem($event)"></app-add-item>
   <app-list [myList]="myList" (delete)="deleteItem($event)"></app-list>
 </div>
